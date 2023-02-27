@@ -1,0 +1,24 @@
+package withNonStaticMethods;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class MethodPrivate04 {
+
+	private  boolean tellMe() {
+		// TODO volver a private
+		// private boolean tellMe() {
+		return true;
+	}
+	class MethodPrivate04Test {
+
+		@Test
+		void test() {
+			MethodPrivate04 methodPrivate04=new MethodPrivate04();
+			assertTrue(methodPrivate04.tellMe());
+		}
+
+	}
+}
+

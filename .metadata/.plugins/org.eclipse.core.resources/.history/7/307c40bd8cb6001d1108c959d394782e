@@ -1,0 +1,27 @@
+package withNonStaticMethods;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MethodWithReturn02Test {
+	//Subject Under Test
+	MethodWithReturn02 sut;
+
+
+	public MethodWithReturn02Test() {
+		super();
+		sut=new MethodWithReturn02();
+	}
+
+	@Test
+	void testGiveMe() {
+		assertTrue(sut.giveMe());
+	}
+
+	@Test
+	void testCreadorRectangulos() {∂
+		fail("Not∫ yet implemented");
+	}
+
+}

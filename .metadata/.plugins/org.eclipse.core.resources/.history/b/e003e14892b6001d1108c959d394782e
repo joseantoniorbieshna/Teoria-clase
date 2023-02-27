@@ -1,0 +1,18 @@
+package withNonStaticMethods;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ClassPropertiesInterface06Test {
+
+	
+	@Test
+	void test() {
+		ClassProperties06 sut=new ClassProperties06();
+		//condiciones iniciales
+		int amount=3;
+		sut.incrementAmount(amount);
+	}
+
+}

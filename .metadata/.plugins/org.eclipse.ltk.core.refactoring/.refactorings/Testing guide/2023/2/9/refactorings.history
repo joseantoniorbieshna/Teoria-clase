@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;calClassProperties06&apos; in &apos;withNonStaticMethods.ClassPropertiesInterface06Test.test()&apos; to &apos;sut&apos;&#x0A;- Original project: &apos;Testing guide&apos;&#x0A;- Original element: &apos;withNonStaticMethods.ClassPropertiesInterface06Test.test().calClassProperties06&apos;&#x0A;- Renamed element: &apos;calClassProperties06&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;calClassProperties06&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;withNonStaticMethods{ClassPropertiesInterface06Test.java[ClassPropertiesInterface06Test~test@calClassProperties06!184!246!202!221!QClassProperties06;!0!false" name="sut" references="true" stamp="1677497350384" version="1.0"/>
+</session>
