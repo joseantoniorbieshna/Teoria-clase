@@ -1,0 +1,55 @@
+package cafetera;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class CafeteableTest {
+	Cafetera cafetera;
+	
+	
+
+	@BeforeAll
+	 static void BeforeAll() {
+		System.out.println("estoy en el before All");
+	}
+
+	@BeforeEach
+	void BeforeEach() {
+	
+		System.out.println("estoy en el before Each");
+	}
+
+	@Test
+	void testLlenarCafetera() {
+		
+		System.out.println("prueba l");
+	}
+
+	@Test
+	void testServirTaza() {
+		System.out.println("prueba 2");
+	}
+
+	@Test
+	void testVaciarCafetera() {
+		System.out.println("prueba 3");
+	}
+
+	@Test
+	void testAgregarCafe() {
+		System.out.println("prueba 4");
+	}
+
+	@AfterEach
+	void afterEach() {
+		System.out.println("after each");
+	}
+
+	@AfterAll
+	static void afterall() {
+		System.out.println("after All");
+	}
+}

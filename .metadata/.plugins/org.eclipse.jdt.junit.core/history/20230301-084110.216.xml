@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CafeteableTest" project="Testing guide" tests="4" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="cafetera.CafeteableTest" incomplete="true" displayname="CafeteableTest" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]">
+    <error>org.junit.platform.commons.JUnitException: @BeforeAll method 'void cafetera.CafeteableTest.BeforeAll()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).&#13;
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.assertStatic(LifecycleMethodUtils.java:59)&#13;
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.lambda$findMethodsAndAssertStatic$0(LifecycleMethodUtils.java:83)&#13;
+	at java.util.ArrayList.forEach(Unknown Source)&#13;
+	at java.util.Collections$UnmodifiableCollection.forEach(Unknown Source)&#13;
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.findMethodsAndAssertStatic(LifecycleMethodUtils.java:83)&#13;
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.findBeforeAllMethods(LifecycleMethodUtils.java:42)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.prepare(ClassTestDescriptor.java:119)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.prepare(ClassTestDescriptor.java:61)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:60)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)&#13;
+	at java.util.Iterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92)&#13;
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:51)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+&#13;
+</error>
+    <testcase name="testAgregarCafe" classname="cafetera.CafeteableTest" incomplete="true" displayname="testAgregarCafe()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testAgregarCafe()]"/>
+    <testcase name="testVaciarCafetera" classname="cafetera.CafeteableTest" incomplete="true" displayname="testVaciarCafetera()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testVaciarCafetera()]"/>
+    <testcase name="testLlenarCafetera" classname="cafetera.CafeteableTest" incomplete="true" displayname="testLlenarCafetera()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testLlenarCafetera()]"/>
+    <testcase name="testServirTaza" classname="cafetera.CafeteableTest" incomplete="true" displayname="testServirTaza()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testServirTaza()]"/>
+  </testsuite>
+</testrun>

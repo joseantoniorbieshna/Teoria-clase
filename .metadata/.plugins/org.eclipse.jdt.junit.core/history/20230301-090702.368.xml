@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CafeteableTest" project="Testing guide" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="cafetera.CafeteableTest" time="0.011" displayname="CafeteableTest" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]">
+    <testcase name="testAgregarCafe" classname="cafetera.CafeteableTest" time="0.001" displayname="testAgregarCafe()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testAgregarCafe()]"/>
+    <testcase name="testVaciarCafetera" classname="cafetera.CafeteableTest" time="0.001" displayname="testVaciarCafetera()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testVaciarCafetera()]"/>
+    <testcase name="testLlenarCafetera" classname="cafetera.CafeteableTest" time="0.004" displayname="testLlenarCafetera()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testLlenarCafetera()]"/>
+    <testcase name="testServirTaza" classname="cafetera.CafeteableTest" time="0.005" displayname="testServirTaza()" uniqueid="[engine:junit-jupiter]/[class:cafetera.CafeteableTest]/[method:testServirTaza()]"/>
+  </testsuite>
+</testrun>

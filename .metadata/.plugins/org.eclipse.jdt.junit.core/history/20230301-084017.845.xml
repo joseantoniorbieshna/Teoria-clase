@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MethodPrivate04Test" project="Testing guide" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="withNonStaticMethods.MethodPrivate04Test" time="0.0" displayname="MethodPrivate04Test" uniqueid="[engine:junit-jupiter]/[class:withNonStaticMethods.MethodPrivate04Test]">
+    <testcase name="test" classname="withNonStaticMethods.MethodPrivate04Test" time="0.0" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:withNonStaticMethods.MethodPrivate04Test]/[method:test()]"/>
+  </testsuite>
+</testrun>

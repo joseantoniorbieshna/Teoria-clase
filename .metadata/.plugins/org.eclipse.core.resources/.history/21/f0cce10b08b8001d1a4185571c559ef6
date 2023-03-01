@@ -1,0 +1,60 @@
+package cafetera;
+
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class CafeteableTest {
+	Cafetera cafetera;
+	short capacidadMaxima = (short)100;
+	@BeforeEach
+	void BeforeEach() {		
+		cafetera=new Cafetera(capacidadMaxima);
+	}
+
+	@Test
+	void testLlenarCafetera() {
+		cafetera.llenarCafetera();
+		assertEquals(cafetera.getCantidadActual(), capacidadMaxima);
+	}
+
+	@Test
+	void testServirTaza() {
+		//probando que me sirve la taza si esta por debajo de su capacidad actual
+		float factor = 1.5f;
+		short taza=((short)(capacidadMaxima/factor));
+		assertEquals(taza, cafetera.servirTaza(taza));
+		//si pidiendo una taza que excede la cantidad actual
+		short restante=cafetera.getCantidadActual();
+		int cantidadSolicitada = restante+1;
+		taza=(short) cafetera.servirTaza(cantidadSolicitada);
+		assertEquals(taza, restante);
+		assertNotEquals(taza, cantidadSolicitada);
+		System.out.println("prueba 2");
+	}
+
+	@Test
+	void testVaciarCafetera() {
+		System.out.println("prueba 3");
+	}
+
+	@Test
+	void testAgregarCafe() {
+		System.out.println("prueba 4");
+	}
+
+	@AfterEach
+	void afterEach() {
+		System.out.println("after each");
+	}
+
+	@AfterAll
+	static void afterall() {
+		System.out.println("after All");
+	}
+}
