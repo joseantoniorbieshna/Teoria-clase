@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="nada" project="Testing guide" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="cafetera.nada" time="0.007" displayname="nada" uniqueid="[engine:junit-jupiter]/[class:cafetera.nada]">
+    <testcase name="testa" classname="cafetera.nada" time="0.001" displayname="testa()" uniqueid="[engine:junit-jupiter]/[class:cafetera.nada]/[method:testa()]"/>
+    <testcase name="testb" classname="cafetera.nada" time="0.002" displayname="testb()" uniqueid="[engine:junit-jupiter]/[class:cafetera.nada]/[method:testb()]"/>
+    <testcase name="testc" classname="cafetera.nada" time="0.004" displayname="testc()" uniqueid="[engine:junit-jupiter]/[class:cafetera.nada]/[method:testc()]"/>
+  </testsuite>
+</testrun>

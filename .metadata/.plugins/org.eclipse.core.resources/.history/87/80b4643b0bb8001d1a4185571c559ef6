@@ -1,0 +1,23 @@
+package cafetera;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class nada {
+	Cafetera cafetera=new Cafetera((short)100);
+
+	@Test
+	void testa() {
+		System.out.println(cafetera.toString());
+	}
+	@Test
+	void testb() {
+		System.out.println(cafetera.toString());
+	}
+	@Test
+	void testc() {
+		System.out.println(cafetera.toString());
+	}
+
+}

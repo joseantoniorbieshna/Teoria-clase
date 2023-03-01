@@ -1,0 +1,45 @@
+package cafetera;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class nada {
+	static Cafetera cafetera=new Cafetera((short)100);
+	
+	
+	@BeforeAll
+	static void ball(){
+		cafetera.llenarCafetera();
+	}
+
+	@Test
+	void testa() {
+		System.out.println(cafetera.toString());
+		int servirTaza = cafetera.servirTaza(100);
+		assertEquals(100, servirTaza);
+	}
+	@Test
+	void testc() {
+		System.out.println(cafetera.toString());
+		int servirTaza = cafetera.servirTaza(100);
+		assertEquals(0, servirTaza);
+	}
+	@Test
+	void testb() {
+		cafetera.llenarCafetera();
+		System.out.println(cafetera.toString());
+		int servirTaza = cafetera.servirTaza(100);
+		assertEquals(100, servirTaza);
+	}
+	@Test
+	void testd() {
+		cafetera.llenarCafetera();
+		System.out.println(cafetera.toString());
+		int servirTaza = cafetera.servirTaza(100);
+		assertEquals(100, servirTaza);
+	}
+
+}
