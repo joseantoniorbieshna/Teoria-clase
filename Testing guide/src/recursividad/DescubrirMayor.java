@@ -8,11 +8,6 @@ public class DescubrirMayor {
 		//
 		int descubreMayor = new DescubrirMayor().descubreMayor(numeros, numeros.length - 1);
 		System.out.println(descubreMayor);
-		int[] numeros2 = numeros;
-		Arrays.sort(numeros2);
-		System.out.println(numeros2);
-		// int descubreMayorOrdenado = new
-		// DescubrirMayor().descubreMayorOrdenado(numeros2,0,numeros.length-1);
 	}
 
 	public int descubreMayor(int[] numeros, int posicion) {
@@ -25,9 +20,6 @@ public class DescubrirMayor {
 			return numeros[posicion];
 		}
 		return mayorAnterior;
-	}
-
-	public int descubreMayorOrdenado(int[] numeros, int min, int max) {
 	}
 
 }
