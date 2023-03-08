@@ -7,6 +7,6 @@ public class PrivateYPublic {
 	}
 
 	private int soyPrivado(int i) {
-		return 0;
+		return i/2;
 	}
 }

@@ -12,6 +12,6 @@ public class Persona {
 	}
 	
 	public void cumpleAnnos() {
-		//TODO
+		this.edad++;
 	}
 }
