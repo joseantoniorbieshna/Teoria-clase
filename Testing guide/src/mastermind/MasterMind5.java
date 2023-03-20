@@ -7,9 +7,7 @@ public class MasterMind5 {
 	private Combinacion enigma;
 	/**
 	 * Sortea el enigma a adivinar
-	 * @return 
-	 * vector de 4 posiciones con números entre 1 y 5 
-	 * Combinacion de 4 colores con valores de ColorCombinacion
+	 * crear Combinacion aleatoria de 4 colores con valores de ColorCombinacion
 	 */
 	public void sortearEnigma() {
 		//TODO
@@ -30,10 +28,13 @@ public class MasterMind5 {
 	
 	/**
 	 * Comprueba si el resultado obtenido es una combinacion ganadora
-	 * @param resultado vector de 4 posiciones que representa el resultado de la combinacion 
-	 * @return verdadero si el resultado esta relleno completamente con 7
+	 * @param jugada es la combinacion con la que el usuario participa
+	 * @param resultado vector de 4 posiciones 
+	 * que representa el resultado de la combinacion 
+	 * 
+	 * @return verdadero si el resultado esta relleno completamente con negros
 	 */
-	public boolean comprobarGanador(ColorResultado[] resultado) {
+	public boolean comprobarGanador(Combinacion jugada) {
 		//TODO
 		return false;
 	}
