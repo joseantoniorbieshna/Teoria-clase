@@ -6,10 +6,14 @@
 <fullyQualifiedTypeName name="enumeracion.Planetas"/>
 <fullyQualifiedTypeName name="com.sun.beans.editors.ColorEditor"/>
 <fullyQualifiedTypeName name="enumeracion.Azules"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="mastermind.MasterMind5"/>
-<fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
 <fullyQualifiedTypeName name="mastermind.MasterMind5Test"/>
 <fullyQualifiedTypeName name="mastermind.Combinacion"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="mastermind.ColorCombinacion"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
+<fullyQualifiedTypeName name="coche.Coche"/>
+<fullyQualifiedTypeName name="coche.Motor"/>
 </qualifiedTypeNameHistroy>
