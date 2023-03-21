@@ -14,6 +14,10 @@ public class Carta {
 	public boolean isConsecutiva(Carta ultimaCarta) {
 		return valor.getValue() + 1 == ultimaCarta.valor.getValue() && palo == ultimaCarta.palo;
 	}
+	
+	public boolean isOdd() {
+		return false;
+	}
 
 	public boolean isRepartida() {
 		return repartida;

@@ -13,7 +13,11 @@
 <fullyQualifiedTypeName name="mastermind.ColorCombinacion"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
 <fullyQualifiedTypeName name="coche.Coche"/>
 <fullyQualifiedTypeName name="coche.Motor"/>
+<fullyQualifiedTypeName name="poker.Carta"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
+<fullyQualifiedTypeName name="cafetera.Cafetera"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
+<fullyQualifiedTypeName name="poker.Baraja"/>
 </qualifiedTypeNameHistroy>

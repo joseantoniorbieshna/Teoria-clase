@@ -12,30 +12,42 @@ import org.junit.jupiter.api.Test;
 
 class CafeteableTest {
 	Cafetera cafetera;
-	short capacidadMaxima = (short)100;
+	final short capacidadMaxima = (short) 100;
+	static Cafetera cafeteraDos;
+
+	@BeforeAll
+	static void beforeAll() {
+		cafeteraDos = new Cafetera((short) 50);
+		cafeteraDos.llenarCafetera();
+	}
+
 	@BeforeEach
-	void BeforeEach() {		
-		cafetera=new Cafetera(capacidadMaxima);
+	void BeforeEach() {
+		cafetera = new Cafetera(capacidadMaxima);
 		cafetera.llenarCafetera();
 	}
 
 	@Test
 	void testLlenarCafetera() {
 		assertEquals(cafetera.getCantidadActual(), capacidadMaxima);
+		cafeteraDos.servirTaza(10);
+		System.out.println("cafetera compartida "+cafeteraDos.getCantidadActual());
 	}
 
 	@Test
 	void testServirTaza() {
-		//probando que me sirve la taza si esta por debajo de su capacidad actual
+		// probando que me sirve la taza si esta por debajo de su capacidad actual
 		float factor = 1.5f;
-		short taza=((short)(capacidadMaxima/factor));
+		short taza = ((short) (capacidadMaxima / factor));
 		assertEquals(taza, cafetera.servirTaza(taza));
-		//si pidiendo una taza que excede la cantidad actual
-		short restante=cafetera.getCantidadActual();
-		int cantidadSolicitada = restante+1;
-		taza=(short) cafetera.servirTaza(cantidadSolicitada);
+		// si pidiendo una taza que excede la cantidad actual
+		short restante = cafetera.getCantidadActual();
+		int cantidadSolicitada = restante + 1;
+		taza = (short) cafetera.servirTaza(cantidadSolicitada);
 		assertEquals(taza, restante);
 		assertNotEquals(taza, cantidadSolicitada);
+		cafeteraDos.servirTaza(10);
+		System.out.println("cafetera compartida "+cafeteraDos.getCantidadActual());
 	}
 
 	@Test
@@ -46,13 +58,13 @@ class CafeteableTest {
 
 	@Test
 	void testAgregarCafe() {
-		//probamos funcionamiento correcto
+		// probamos funcionamiento correcto
 		cafetera.vaciarCafetera();
 		cafetera.agregarCafe(capacidadMaxima);
 		assertEquals(capacidadMaxima, cafetera.getCantidadActual());
 		// intentar agregar por encima de la capacidad maxima
 		cafetera.vaciarCafetera();
-		cafetera.agregarCafe(capacidadMaxima*2);
+		cafetera.agregarCafe(capacidadMaxima * 2);
 		assertEquals(capacidadMaxima, cafetera.getCantidadActual());
 	}
 
