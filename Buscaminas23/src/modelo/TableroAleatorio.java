@@ -19,26 +19,47 @@ public class TableroAleatorio extends Tablero {
 		super(lado);
 	}
 
-	
 	public void contarMinasAlrededor(List<Coordenada> posiciones) {
 		// TODO
 	}
 
 	public boolean[][] getCasillasDesveladas() {
-		// TODO
+
 		return null;
 	}
 
 	public void desvelarContiguas(Coordenada lugar) {
-		//TODO
+		// tablero, lugar
+		Casilla casilla = getCasilla(lugar);
+		if (casilla.isVelada()) {
+			casilla.setVelada(false);
+			if (!casilla.isMina()) {
+				if (casilla.getMinasAlrededor() == 0) {
+					// desde el punto -1,-1 con respecto a casilla hasta +1,+1
+					for (int i = lugar.getPosX() - 1; i <= lugar.getPosX() + 1; i++) {
+						for (int j = lugar.getPosY() - 1; j <= lugar.getPosY() + 1; j++) {
+							Coordenada coordenada = new Coordenada(i, j);
+							if (isInToBounds(coordenada)) {
+								desvelarContiguas(coordenada);
+							}
+						}
+
+					}
+				}
+			}
+
+		}
 	}
 
-	
+	private boolean isInToBounds(Coordenada coordenada) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 	public List<Coordenada> generaAleatorio(int minas, int longitud) {
-		//TODO
+		// TODO
 		return null;
 
 	}
 
-	
 }

@@ -27,7 +27,10 @@ class TableroAleatorioTest {
 	@Test
 	void testDesvelarCasillas() {
 		Coordenada desvelada = new Coordenada(3, 0);
-		boolean tablero[][] = { { true, true, true, true }, { false, false, true, true }, { false, false, true, true },
+		boolean tablero[][] = { 
+				{ true, true, true, true }, 
+				{ false, false, true, true }, 
+				{ false, false, true, true },
 				{ false, false, true, true } };
 		tableroAleatorio.desvelarContiguas(desvelada);
 		assertArrayEquals(tablero, tableroAleatorio.getCasillasDesveladas());
@@ -35,7 +38,11 @@ class TableroAleatorioTest {
 
 	@Ignore
 	void testTableroAleatorioContarMinasalrededor() {
-		int tablero[][] = { { 0, 2, 1, 1 }, { 1, 3, 0, 2 }, { 0, 2, 0, 2 }, { 0, 1, 1, 1 } };
+		int tablero[][] = { 
+				{ 0, 2, 1, 1 }, 
+				{ 1, 3, 0, 2 }, 
+				{ 0, 2, 0, 2 }, 
+				{ 0, 1, 1, 1 } };
 		for (int i = 0; i < tablero.length; i++) {
 			for (int j = 0; j < tablero[0].length; j++) {
 				assertEquals(tablero[i][j], tableroAleatorio.getCasilla(new Coordenada(i, j)).getMinasAlrededor());
