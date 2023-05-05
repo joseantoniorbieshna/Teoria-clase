@@ -20,4 +20,7 @@
 <fullyQualifiedTypeName name="cafetera.Cafetera"/>
 <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
 <fullyQualifiedTypeName name="poker.Baraja"/>
+<fullyQualifiedTypeName name="modelo.Coordenada"/>
+<fullyQualifiedTypeName name="java.sql.DatabaseMetaData"/>
+<fullyQualifiedTypeName name="utiles.Utiles"/>
 </qualifiedTypeNameHistroy>
