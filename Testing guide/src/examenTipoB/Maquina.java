@@ -44,20 +44,38 @@ public class Maquina {
 	 * @return
 	 */
 	public Programa getMenorRecaudacion() {
-		HashMap<Programa, Long> inventario = totalizarValores();
-		return inventario.entrySet()
+		return totalizarValores().entrySet()
 			    .stream()
 			    .min(Comparator.comparingLong(Entry::getValue)).stream().findFirst().get().getKey();
 	}
 
 	private HashMap<Programa, Long> totalizarValores() {
-		Set<Entry<Programa, List<Periodo>>> entrySet = periodos.stream()
-		.collect(Collectors.groupingBy(Periodo::getPrograma)).entrySet();
 		HashMap<Programa,Long> inventario=new HashMap();
-		for (Entry<Programa, List<Periodo>> entry : entrySet) {
+		for (Entry<Programa, List<Periodo>> entry : periodos.stream()
+				.collect(Collectors.groupingBy(Periodo::getPrograma)).entrySet()) {
 			inventario.put(entry.getKey(),entry.getValue().stream().mapToLong(algo->algo.getRecaudacionParcial()).sum());
 		}
 		return inventario;
+	}
+	
+	private HashMap<Programa, Long> totalizarDays() {
+		HashMap<Programa,Long> inventario=new HashMap();
+		for (Entry<Programa, List<Periodo>> entry : periodos.stream()
+				.collect(Collectors.groupingBy(Periodo::getPrograma)).entrySet()) {
+			inventario.put(entry.getKey(),entry.getValue().stream().mapToLong(algo->algo.getDays()).sum());
+		}
+		return inventario;
+	}
+	
+	private HashMap<Programa,Float> totalizarIndices(){
+		HashMap<Programa,Float> indices=new HashMap();
+		HashMap<Programa, Long> totalizarValores = totalizarValores();
+		HashMap<Programa, Long> totalizarDays = totalizarDays();
+		for (Entry<Programa,Long> entrada : totalizarValores.entrySet()) {
+			Programa key = entrada.getKey();
+			indices.put(key,(float)entrada.getValue()/totalizarDays.get(key));
+		}
+		return indices;
 	}
 	
 	/**
@@ -65,8 +83,7 @@ public class Maquina {
 	 * @return
 	 */
 	public Programa getMayorRecaudacion() {
-		HashMap<Programa, Long> inventario = totalizarValores();
-		return inventario.entrySet()
+		return totalizarValores().entrySet()
 			    .stream()
 			    .max(Comparator.comparingLong(Entry::getValue)).stream().findFirst().get().getKey();
 	}
@@ -101,8 +118,7 @@ public class Maquina {
 	 * @return
 	 */
 	public Long getRecaudacionTotal() {
-		//TODO
-		return -1L;
+		return periodos.stream().mapToLong(value->value.getRecaudacionParcial()).sum();
 	}
 	
 	/**
@@ -110,7 +126,14 @@ public class Maquina {
 	 * @return el programa con el mejor coefiente 
 	 */
 	public Programa getMejorIndice() {
-		return null;
+		return totalizarIndices().entrySet().stream().max(new Comparator<Entry<Programa,Float>>() {
+
+			@Override
+			public int compare(Entry<Programa, Float> o1, Entry<Programa, Float> o2) {
+				return (int) (o1.getValue()-o2.getValue());
+			}
+		}).get().getKey();
+		
 	}
 
 
